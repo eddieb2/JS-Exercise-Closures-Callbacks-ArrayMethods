@@ -111,7 +111,7 @@ function processLastItem(stringList, callback) {
 */
 
 /////////////////////////////// UNDERSTAND BUT COULD USE A WALKTHROUGH //////////////////////////////////////////////
-/////////////////// is there a way to do this without using reduce? //////////////////////////////////////////
+//////////////////////////// WOULD LIKE TO SEE ANOTHER SOLUTION WITHOUT REDUCE /////////////////////////////////
 function processSum(numberList, callback) {
   return callback(numberList.reduce((a, b) => {
     return a + b;
@@ -142,6 +142,7 @@ function processSum(numberList, callback) {
 */
 
 ////////////////////////////////////////// COMPLETELY UNDERSTOOD /////////////////////////////////////////////////
+//////////////////////////// WOULD LIKE TO SEE ANOTHER SOLUTION /////////////////////////////////
 function processProduct(num1, num2, callback) {
   return callback(num1 * num2);
 }
@@ -172,8 +173,11 @@ function processProduct(num1, num2, callback) {
  * "lady gaga" and `['foo', 'bar']` and `(bool) => bool ? 'nice!' : 'sad'`,
  * should return "sad".
 */
-function processContains(/* CODE HERE */) {
-  /* CODE HERE */
+
+////////////////////////////// COMPLETELY UNDERSTAND ///////////////////////////////////////////////////
+//////////////////////////// WOULD LIKE TO SEE ANOTHER SOLUTION /////////////////////////////////
+function processContains(item, list, callback) {
+  return callback(list.includes(item) ? true : false);
 }
 
 /**
