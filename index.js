@@ -211,6 +211,7 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
 // updates to their facilities. Each business has assigned a representative
 // to attend the event along with a small donation.
 
+
 /**
  * ### Challenge `getFullNames`
  * 
@@ -221,9 +222,24 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
  * @returns an array with all the runners' full names in the following format: "Smith, John".
  * The full names appear in the array in the same order the runners appear in the `runners` array.
 */
-function getFullNames(/* CODE HERE */) {
-  /* CODE HERE */
+
+// Create new array
+// Iterate through the array indicies 
+// Find first and last name
+// Combine first and last name (last_name, first_name)
+// Return new array
+
+function getFullNames(array) {
+  let fullNamesArray = [];
+  array.forEach((currentValue) => {
+    fullNamesArray.push(`${currentValue.last_name}, ${currentValue.first_name}`)
+  });
+  return fullNamesArray;
 }
+
+// console.log(getFullNames(runners));
+// Result: {'last_name, first_name', 'last_name, first_name', 'last_name, first_name', ...}
+
 
 /**
  * ### Challenge `firstNamesAllCaps`
