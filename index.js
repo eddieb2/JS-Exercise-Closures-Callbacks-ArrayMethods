@@ -228,7 +228,7 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
 // Find first and last name
 // Combine first and last name (last_name, first_name)
 // Return new array
-
+///////////////////////////// COMPLETELY UNDERSTAND ////////////////////////////////////////////
 function getFullNames(array) {
   let fullNamesArray = [];
   array.forEach((currentValue) => {
@@ -253,9 +253,20 @@ function getFullNames(array) {
  * @returns an array with all the runners' first names in ALL CAPS.
  * The first names appear in the array in the same order the runners appear in the `runners` array.
 */
-function firstNamesAllCaps(/* CODE HERE */) {
-  /* CODE HERE */
+
+// New array
+// iterate through original array and find first names
+// push first name in all caps to new array
+/////////////////////////////// COMPLETELY UNDERSTAND /////////////////////////////////////
+function firstNamesAllCaps(runners) {
+  const namesAllCapsArray = runners.map((item) => {
+    return item.first_name.toUpperCase();
+  });
+  return namesAllCapsArray;
 }
+
+// console.log(firstNamesAllCaps(runners));
+// Result: all names in array are all caps
 
 /**
  * ### Challenge `getRunnersByTShirtSize`
