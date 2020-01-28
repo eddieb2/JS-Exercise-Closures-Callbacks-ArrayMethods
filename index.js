@@ -14,6 +14,7 @@
  * Invoking `processFirstItem` passing `['foo', 'bar']` and `(str) => str + str`,
  * should return 'foofoo'.
 */
+///////////////////////////////////////////////// KIND OF UNDERSTAND ///////////////////////////////////////////////////////////////////////////
 function processFirstItem(stringList, callback) {
   return callback(stringList[0])
 }
@@ -48,9 +49,17 @@ function processFirstItem(stringList, callback) {
  * [2] Invoking `processLength` passing `[]` and `(num) => "There are " + num`,
  * should return "There are 0".
 */
-function processLength(/* CODE HERE */) {
-  /* CODE HERE */
+
+/////////////////////////////////////////// CORRECT && PARTIAL UNDERSTANDING ///////////////////////////////////
+function processLength(list, callback) {
+  return callback(list.length);
 }
+
+// console.log(processLength(['foo', 'bar'],(num) => num + 1000));
+// Result: 1002
+
+// console.log(processLength([],(num) => 'There are ' + num));
+// Result: There are 0
 
 /**
  * ### Challenge `processLastItem`
@@ -66,9 +75,22 @@ function processLength(/* CODE HERE */) {
  * Invoking `processLastItem` passing `['foo', 'bar']` and `(str) => str + str`,
  * should return 'barbar'.
 */
-function processLastItem(/* CODE HERE */) {
-  /* CODE HERE */
+
+///////////////////////////////////////// CORRECT && UNDERSTAND COMPLETELY ///////////////////////////////////////////
+function processLastItem(stringList, callback) {
+  return callback(stringList[stringList.length - 1]);
 }
+
+// processLastItem(['foo', 'bar'],(str) => str + str);
+// Result: 'barbar'
+
+
+////////// This works but isn't completely correct. Grabs from index 1 only.
+// function processLastItem(stringList, callback) {
+//   return callback(stringList[1]);
+// }
+
+
 
 /**
  * ### Challenge `processSum`
@@ -87,9 +109,18 @@ function processLastItem(/* CODE HERE */) {
  * [2] Invoking `processSum` passing `[]` and `(num) => num + 1000`,
  * should return 1000.
 */
-function processSum(/* CODE HERE */) {
-  /* CODE HERE */
+
+/////////////////////////////// UNDERSTAND BUT COULD USE A WALKTHROUGH //////////////////////////////////////////////
+/////////////////// is there a way to do this without using reduce? //////////////////////////////////////////
+function processSum(numberList, callback) {
+  return callback(numberList.reduce((a, b) => {
+    return a + b;
+  }, 0));
 }
+
+// console.log(processSum([30,20,30], (num) => num + " is a big number!"))
+// Result: "60 is a big number!"
+// Tested with more values in the array and it functions properly
 
 /**
  * ### Challenge `processProduct`
@@ -109,9 +140,17 @@ function processSum(/* CODE HERE */) {
  * [2] Invoking `processProduct` passing 25 and 0 and `(num) => num + 1000`,
  * should return 1000.
 */
-function processProduct(/* CODE HERE */) {
-  /* CODE HERE */
+
+////////////////////////////////////////// COMPLETELY UNDERSTOOD /////////////////////////////////////////////////
+function processProduct(num1, num2, callback) {
+  return callback(num1 * num2);
 }
+
+// console.log(processProduct(2, 7, (num) => num + " is a big number!"))
+// Result: "14 is a big number!"
+// console.log(processProduct(25, 0, (num) => num + 1000))
+// Result: 1000
+
 
 /**
  * ### Challenge `processContains`
