@@ -199,8 +199,13 @@ function processContains(item, list, callback) {
  * [2] Invoking `processDuplicateFree` passing `[1,1,2,2,3]` and `(arr) => arr.length`,
  * should return 3.
 */
-function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */) {
-  /* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */
+// fxn takes an array and callback
+// initialize new arr
+//
+
+function processDuplicateFree(list, callback) {
+  let dupFreeArr = new Set(list);
+  return callback(Array.from(dupFreeArr));
 }
 
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
@@ -366,7 +371,6 @@ function counterMakerWithLimit(max) {
   return function counter(){
     if(count >= max){
       count = 0;
-      
     } else {
       count++;
     }
