@@ -304,12 +304,16 @@ function getRunnersByTShirtSize(runners, tShirtSize) {
  * @returns a number which is the sum of the donations by all runners.
 */
 
+//////////////////////////////////////// COMPELTELY UNDERSTAND //////////////////////////////////////////////
 function tallyUpDonations(runners) {
   const totalDonations = runners.reduce((accumulator, item) => {
     return accumulator + item.donation;
   }, 0);
   return totalDonations;
 }
+
+// console.log(tallyUpDonations(runners));
+// Result: 7043
 
 /////////////// CLOSURES ///////////////
 /////////////// CLOSURES ///////////////
@@ -329,12 +333,13 @@ function tallyUpDonations(runners) {
 */
 function counterMaker() {
   // BROKEN CODE STARTS
-  const count = 0;
-  function counter() {
-    ++count
+  let count = 0;
+  return function counter() {
+    return count++;
   }
   // BROKEN CODE ENDS
 }
+
 
 /**
  * ### Challenge `counterMakerWithLimit`
